@@ -1,5 +1,5 @@
 #ifndef CORE_H
-
+#define CORE_H
 #ifdef DIV_BUILD_DLL
 #define DIVISION_API __declspec(dllexport)
 #else
