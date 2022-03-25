@@ -1,4 +1,6 @@
 #include "Application.h"
+#include "../Events/AppEvent.h"
+#include "../Utils/Log.h"
 #include <iostream>
 namespace Division 
 {
@@ -9,6 +11,6 @@ namespace Division
 
 	}
 	void Application::Run() {
-		std::cout << "Welcome to Division" << std::endl;
+		DIV_TRACE("HOLA");
 	}
 }

@@ -3,6 +3,8 @@
 #include <memory>
 #include "../Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+
 namespace Division
 {
 	class DIVISION_API  Log
