@@ -1,7 +1,8 @@
 #ifndef APP_H
 #define APP_H
-#include "../Core.h"
-#include "../Events/Event.h"
+#include "Division/Core.h"
+#include "Division/Events/Event.h"
+#include "Division/Events/AppEvent.h"
 #include "Division/Window/WindowInterface.h"
 
 namespace Division
@@ -16,6 +17,10 @@ namespace Division
 		Application();
 		virtual ~Application();
 		void Run();
+
+		void OnEvent(Event& e);
+	private:
+		bool OnWindowClosed(WindowCloseEvent& e);
 	};
 	Application* CreateApplication();
 }

@@ -34,6 +34,8 @@ namespace Division
 	private:
 		virtual void Init(const WindowProperties& properties);
 		virtual void ShutDown();
+		void SetCallbacks();
+
 		 
 	};
 }

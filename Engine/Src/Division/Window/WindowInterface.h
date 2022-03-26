@@ -19,6 +19,7 @@ namespace Division
 	public:
 		static WindowInterface* Create(const WindowProperties& properties = WindowProperties());
 
+		//	funcion que devuelve void y recibe Event como parametro
 		using EventCallbackFn = std::function<void(Event&)>;
 
 		virtual ~WindowInterface() {}
