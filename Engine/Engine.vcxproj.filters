@@ -7,6 +7,9 @@
     <Filter Include="Division\Application">
       <UniqueIdentifier>{CD7FF363-B90E-7D2D-622D-91284E9B8DD3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Division\Events">
+      <UniqueIdentifier>{AEC1C451-1A4D-3216-235E-B50A8F688E16}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Division\Utils">
       <UniqueIdentifier>{EA85642A-D653-5830-BFE7-C856AB543495}</UniqueIdentifier>
     </Filter>
@@ -22,13 +25,22 @@
     <ClInclude Include="src\Division\Entry.h">
       <Filter>Division</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\Events\AppEvent.h">
+      <Filter>Division\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Events\Event.h">
+      <Filter>Division\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Events\KeyEvent.h">
+      <Filter>Division\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Events\MouseEvent.h">
+      <Filter>Division\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Utils\Log.h">
       <Filter>Division\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Division\Events\Event.h" />
-    <ClInclude Include="Src\Division\Events\AppEvent.h" />
-    <ClInclude Include="Src\Division\Events\MouseEvent.h" />
-    <ClInclude Include="Src\Division\Events\KeyEvent.h" />
+    <ClInclude Include="src\dpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
@@ -37,5 +49,6 @@
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>Division\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="src\dpch.cpp" />
   </ItemGroup>
 </Project>

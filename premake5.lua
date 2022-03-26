@@ -8,7 +8,7 @@ workspace "Engine"
 		"Dist"
 	}
 
-outputdir	= "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+outputdir	= "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"	
 
 project "Engine"
 	location "Engine"
@@ -17,6 +17,9 @@ project "Engine"
 
 	targetdir ("Bin/"  ..outputdir.. "/%{prj.name}")
 	objdir ("Obj/"  ..outputdir.. "/%{prj.name}")
+
+	pchheader "dpch.h"
+	pchsource "Engine/Src/dpch.cpp"
 	
 	files
 	{
@@ -26,7 +29,7 @@ project "Engine"
 
 	includedirs 
 	{
-		"%{prj.name}/src"
+		"%{prj.name}/src",
 		"%{prj.name}//Libs/spdlog/include"
 	}
 	

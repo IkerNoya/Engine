@@ -1,8 +1,8 @@
 #ifndef MOUSE_EVENT_H
 #define MOUSE_EVENT_H
 
+
 #include "Event.h"
-#include <sstream>
 
 namespace Division {
 	class DIVISION_API MouseMovedEvent : public Event {
@@ -37,6 +37,12 @@ namespace Division {
 
 		EVENT_CLASS_TYPE(MouseScrolled)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+	};
+
+	class DIVISION_API MouseButtonEvent : Event {
+		int _button;
+	public:
+		inline int GetMouseButton() const { return _button; }
 	};
 }
 

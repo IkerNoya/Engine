@@ -1,9 +1,8 @@
 #ifndef EVENT_H
 #define EVENT_H
 
+#include "dpch.h"
 #include "../Core.h"
-#include <string>
-#include <functional>
 
 namespace Division
 {
@@ -56,11 +55,11 @@ namespace Division
 		using EventFn = std::function<bool(T&)>;
 	public:
 		EventDispatcher(Event& newEvent) : _event(newEvent) {}
-
+		// magia arcana, no tocar
 		template<typename T>
 		bool Dispatch(EventFn<T> func) {
 			if (_event.GetEventType() == T::GetStaticType()) {
-				_event._handled = func(*(T*)&_event);
+				_event._handled = func(*(T*)&_event); 
 				return true;
 			}
 			return false;
