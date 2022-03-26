@@ -13,6 +13,9 @@
     <Filter Include="Division\Utils">
       <UniqueIdentifier>{EA85642A-D653-5830-BFE7-C856AB543495}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Division\Window">
+      <UniqueIdentifier>{B122DB7A-1DAE-483F-26BF-CB3392C9A43F}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Division.h" />
@@ -40,6 +43,12 @@
     <ClInclude Include="src\Division\Utils\Log.h">
       <Filter>Division\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\Window\Window.h">
+      <Filter>Division\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Window\WindowInterface.h">
+      <Filter>Division\Window</Filter>
+    </ClInclude>
     <ClInclude Include="src\dpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +57,9 @@
     </ClCompile>
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>Division\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\Window\Window.cpp">
+      <Filter>Division\Window</Filter>
     </ClCompile>
     <ClCompile Include="src\dpch.cpp" />
   </ItemGroup>

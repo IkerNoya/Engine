@@ -13,6 +13,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Division/Utils/Log.h"
+
 #include <Windows.h>
 
 #endif // !DPCH_H
