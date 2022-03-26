@@ -14,6 +14,7 @@
 #include <unordered_set>
 
 #include "Division/Utils/Log.h"
+#include "glm.hpp"
 
 #include <Windows.h>
 

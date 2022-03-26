@@ -37,7 +37,8 @@ project "Engine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}//Libs/spdlog/include",
-		"%{IncludeDir.glfw}"
+		"%{IncludeDir.glfw}",
+		"%{prj.name}//Libs/GLM/glm"
 	}
 
 	links 
@@ -95,7 +96,8 @@ project "Game"
 	includedirs 
 	{
 		"Engine/Libs/spdlog/include",
-		"Engine/src"
+		"Engine/src",
+		"Engine/Libs/GLM/glm"
 	}
 
 	links

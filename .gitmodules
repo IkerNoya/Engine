@@ -4,3 +4,6 @@
 [submodule "Engine/Libs/glfw"]
 	path = Engine/Libs/glfw
 	url = https://github.com/TheCherno/GLFW
+[submodule "Engine/Libs/GLM"]
+	path = Engine/Libs/GLM
+	url = https://github.com/g-truc/glm
