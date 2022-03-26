@@ -10,6 +10,9 @@
     <Filter Include="Division\Events">
       <UniqueIdentifier>{AEC1C451-1A4D-3216-235E-B50A8F688E16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Division\Layer">
+      <UniqueIdentifier>{5681B729-424F-AB2F-2BE3-1B5617508794}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Division\Utils">
       <UniqueIdentifier>{EA85642A-D653-5830-BFE7-C856AB543495}</UniqueIdentifier>
     </Filter>
@@ -40,6 +43,12 @@
     <ClInclude Include="src\Division\Events\MouseEvent.h">
       <Filter>Division\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\Layer\Layer.h">
+      <Filter>Division\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Layer\LayerStack.h">
+      <Filter>Division\Layer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Utils\Log.h">
       <Filter>Division\Utils</Filter>
     </ClInclude>
@@ -54,6 +63,12 @@
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
       <Filter>Division\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\Layer\Layer.cpp">
+      <Filter>Division\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\Layer\LayerStack.cpp">
+      <Filter>Division\Layer</Filter>
     </ClCompile>
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>Division\Utils</Filter>

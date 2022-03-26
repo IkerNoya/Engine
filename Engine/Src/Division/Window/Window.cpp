@@ -4,6 +4,7 @@
 #include "Division/Events/KeyEvent.h"
 #include "Division/Events/MouseEvent.h"
 
+#include <glad/glad.h>
 
 namespace Division
 {
@@ -16,7 +17,7 @@ namespace Division
 	WindowInterface* WindowInterface::Create(const WindowProperties& properties) {
 		return new Window(properties);
 	}
-	
+
 	Window::Window(const WindowProperties& properties) {
 		Init(properties);
 	}
@@ -38,9 +39,11 @@ namespace Division
 			glfwSetErrorCallback(GLFWErorCallback);
 			_GLFWInitialized = true;
 		}
-		
+
 		_window = glfwCreateWindow(static_cast<int>(_data.width), static_cast<int>(_data.height), _data.title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(_window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		DIV_CORE_ASSERT(status, "Couldn't initialize glad");
 		glfwSetWindowUserPointer(_window, &_data);
 		SetVSync(true);
 
@@ -98,35 +101,35 @@ namespace Division
 
 		glfwSetMouseButtonCallback(_window, [](GLFWwindow* window, int button, int action, int mods) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-				switch (action) {
-					case GLFW_PRESS:
-					{
-						MouseButtonPressedEvent pressCallback(button);
-						data.EventCallback(pressCallback);
-						break;
-					}
-					case GLFW_RELEASE:
-					{
-						MouseButtonReleasedEvent releaseCallback(button);
-						data.EventCallback(releaseCallback);	
-						break;
-					}
+			switch (action) {
+				case GLFW_PRESS:
+				{
+					MouseButtonPressedEvent pressCallback(button);
+					data.EventCallback(pressCallback);
+					break;
 				}
-		});
+				case GLFW_RELEASE:
+				{
+					MouseButtonReleasedEvent releaseCallback(button);
+					data.EventCallback(releaseCallback);
+					break;
+				}
+			}
+			});
 
 		glfwSetScrollCallback(_window, [](GLFWwindow* window, double x, double y) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
 			MouseScrolledEvent scrollEvent(static_cast<float>(x), static_cast<float>(y));
 			data.EventCallback(scrollEvent);
-		});
+			});
 
 		glfwSetCursorPosCallback(_window, [](GLFWwindow* window, double x, double y) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
 			MouseMovedEvent movedEvent(static_cast<float>(x), static_cast<float>(y));
 			data.EventCallback(movedEvent);
-		});
+			});
 	}
 
 	void Window::OnUpdate() {

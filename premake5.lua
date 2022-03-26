@@ -13,8 +13,10 @@ outputdir	= "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder solution directory)
 IncludeDir = {}
 IncludeDir["glfw"] = "Engine/Libs/glfw/include"
+IncludeDir["glad"] = "Engine/Libs/glad/include"
 
 include "Engine/Libs/glfw"
+include "Engine/Libs/glad"
 
 project "Engine"
 	location "Engine"
@@ -38,12 +40,14 @@ project "Engine"
 		"%{prj.name}/src",
 		"%{prj.name}//Libs/spdlog/include",
 		"%{IncludeDir.glfw}",
+		"%{IncludeDir.glad}",
 		"%{prj.name}//Libs/GLM/glm"
 	}
 
 	links 
 	{
 		"glfw",
+		"glad",
 		"opengl32.lib"
 	}
 	
@@ -54,7 +58,8 @@ project "Engine"
 		
 		defines
 		{
-			"DIV_BUILD_DLL"	
+			"DIV_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -64,14 +69,17 @@ project "Engine"
 
 	filter "configurations:Debug"
 		defines "DIV_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "DIV_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "DIV_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter {"system:windows", "configurations:Release"}
@@ -117,14 +125,17 @@ project "Game"
 
 	filter "configurations:Debug"
 		defines "DIV_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "DIV_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "DIV_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter {"system:windows", "configurations:Release"}

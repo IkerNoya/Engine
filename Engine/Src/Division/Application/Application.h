@@ -4,6 +4,7 @@
 #include "Division/Events/Event.h"
 #include "Division/Events/AppEvent.h"
 #include "Division/Window/WindowInterface.h"
+#include "Division/Layer/LayerStack.h"
 
 namespace Division
 {
@@ -12,6 +13,7 @@ namespace Division
 	{
 		//unique indica que solo esta clase posee este puntero/instancia
 		std::unique_ptr<WindowInterface> _window;
+		LayerStack _layerStack;
 		bool _running = true;
 	public:
 		Application();
@@ -19,6 +21,9 @@ namespace Division
 		void Run();
 
 		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* overlay);
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
 	};

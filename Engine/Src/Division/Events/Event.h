@@ -42,6 +42,7 @@ namespace Division
 		virtual int GetCategoryFlags() const = 0;
 		virtual std::string ToString() const { return GetName(); };
 
+		inline bool Handled() { return _handled; }
 		inline bool IsInCategory(EventCategory category) {
 			return GetCategoryFlags() & category;
 		}
