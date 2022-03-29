@@ -10,11 +10,17 @@
     <Filter Include="Division\Events">
       <UniqueIdentifier>{AEC1C451-1A4D-3216-235E-B50A8F688E16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Division\GUI">
+      <UniqueIdentifier>{1ED93A6F-0A3C-CA13-B3C1-02CA9F039696}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Division\Layer">
       <UniqueIdentifier>{5681B729-424F-AB2F-2BE3-1B5617508794}</UniqueIdentifier>
     </Filter>
     <Filter Include="Division\Utils">
       <UniqueIdentifier>{EA85642A-D653-5830-BFE7-C856AB543495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Division\Utils\OpenGL">
+      <UniqueIdentifier>{DE23061C-4A90-C116-1384-59747FAFE37E}</UniqueIdentifier>
     </Filter>
     <Filter Include="Division\Window">
       <UniqueIdentifier>{B122DB7A-1DAE-483F-26BF-CB3392C9A43F}</UniqueIdentifier>
@@ -43,6 +49,9 @@
     <ClInclude Include="src\Division\Events\MouseEvent.h">
       <Filter>Division\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\GUI\GuiLayer.h">
+      <Filter>Division\GUI</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Layer\Layer.h">
       <Filter>Division\Layer</Filter>
     </ClInclude>
@@ -52,6 +61,15 @@
     <ClInclude Include="src\Division\Utils\Log.h">
       <Filter>Division\Utils</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_glfw.h">
+      <Filter>Division\Utils\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.h">
+      <Filter>Division\Utils\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3_loader.h">
+      <Filter>Division\Utils\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Window\Window.h">
       <Filter>Division\Window</Filter>
     </ClInclude>
@@ -59,13 +77,13 @@
       <Filter>Division\Window</Filter>
     </ClInclude>
     <ClInclude Include="src\dpch.h" />
-    <ClInclude Include="Src\Division\GUI\GuiLayer.h" />
-    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.h" />
-    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
       <Filter>Division\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\GUI\GuiLayer.cpp">
+      <Filter>Division\GUI</Filter>
     </ClCompile>
     <ClCompile Include="src\Division\Layer\Layer.cpp">
       <Filter>Division\Layer</Filter>
@@ -76,12 +94,15 @@
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>Division\Utils</Filter>
     </ClCompile>
+    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_glfw.cpp">
+      <Filter>Division\Utils\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp">
+      <Filter>Division\Utils\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Division\Window\Window.cpp">
       <Filter>Division\Window</Filter>
     </ClCompile>
     <ClCompile Include="src\dpch.cpp" />
-    <ClCompile Include="Src\Division\GUI\GuiLayer.cpp" />
-    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.cpp" />
-    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp" />
   </ItemGroup>
 </Project>

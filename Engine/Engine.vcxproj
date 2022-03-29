@@ -83,8 +83,7 @@
       <AdditionalIncludeDirectories>src;Libs\spdlog\include;Libs\glfw\include;Libs\glad\include;Libs\ImGui;Libs\GLM\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -109,8 +108,8 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MD /MT %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>/MT %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -136,8 +135,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -160,24 +158,25 @@
     <ClInclude Include="src\Division\Events\Event.h" />
     <ClInclude Include="src\Division\Events\KeyEvent.h" />
     <ClInclude Include="src\Division\Events\MouseEvent.h" />
-    <ClInclude Include="Src\Division\GUI\GuiLayer.h" />
+    <ClInclude Include="src\Division\GUI\GuiLayer.h" />
     <ClInclude Include="src\Division\Layer\Layer.h" />
     <ClInclude Include="src\Division\Layer\LayerStack.h" />
     <ClInclude Include="src\Division\Utils\Log.h" />
-    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.h" />
-    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_glfw.h" />
+    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Division\Window\Window.h" />
     <ClInclude Include="src\Division\Window\WindowInterface.h" />
     <ClInclude Include="src\dpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp" />
-    <ClCompile Include="Src\Division\GUI\GuiLayer.cpp" />
+    <ClCompile Include="src\Division\GUI\GuiLayer.cpp" />
     <ClCompile Include="src\Division\Layer\Layer.cpp" />
     <ClCompile Include="src\Division\Layer\LayerStack.cpp" />
     <ClCompile Include="src\Division\Utils\Log.cpp" />
-    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.cpp" />
-    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Division\Window\Window.cpp" />
     <ClCompile Include="src\dpch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
