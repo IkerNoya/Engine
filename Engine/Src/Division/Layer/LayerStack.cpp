@@ -19,11 +19,13 @@ namespace Division
 	void LayerStack::PushLayer(Layer* layer)
 	{
 		_layerInsert = _layers.emplace(_layerInsert, layer);
+		layer->OnAttach();
 	}
 
 	void LayerStack::PushOverlay(Layer* overlay)
 	{
 		 _layers.emplace_back(overlay);
+		 overlay->OnAttach();
 	}
 
 	void LayerStack::PopLayer(Layer* layer)

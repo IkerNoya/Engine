@@ -1,6 +1,7 @@
 #include "Game.h"
 
 Game::Game() : Application(){
+	PushOverlay(new Division::GuiLayer);
 }
 
 Game::~Game(){

@@ -59,6 +59,9 @@
       <Filter>Division\Window</Filter>
     </ClInclude>
     <ClInclude Include="src\dpch.h" />
+    <ClInclude Include="Src\Division\GUI\GuiLayer.h" />
+    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.h" />
+    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
@@ -77,5 +80,8 @@
       <Filter>Division\Window</Filter>
     </ClCompile>
     <ClCompile Include="src\dpch.cpp" />
+    <ClCompile Include="Src\Division\GUI\GuiLayer.cpp" />
+    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp" />
   </ItemGroup>
 </Project>

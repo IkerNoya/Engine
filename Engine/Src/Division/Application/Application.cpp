@@ -9,7 +9,11 @@ namespace Division
 {
 #define BIND_EVENT(x) std::bind(&Application::x, this, std::placeholders::_1)
 
+	Application* Application::_instance = nullptr;
+
 	Application::Application() {
+		DIV_CORE_ASSERT(!_instance, ("App already exists"));
+		_instance = this;
 		//no lo tenemos que eliminar manualmente
 		_window = std::unique_ptr<WindowInterface>(WindowInterface::Create());
 		_window->SetEventCallback(BIND_EVENT(OnEvent));
@@ -31,7 +35,7 @@ namespace Division
 	void Application::OnEvent(Event& e){
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT(OnWindowClosed));
-
+		DIV_TRACE(e);
 		for (auto it = _layerStack.end(); it != _layerStack.begin(); ) {
 			(*--it)->OnEvent(e);
 			if (e.Handled())

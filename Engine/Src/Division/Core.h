@@ -16,6 +16,7 @@
 
 //se setea un bitfield moviendo a 1 en x cantidad de lugares
 #define BIT(x) (1 << x)
+#define DIV_BIND_EVENT(x)    std::bind(&x, this, std::placeholders::_1)
 
 
 #endif // !CORE_H

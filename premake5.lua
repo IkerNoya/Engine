@@ -14,9 +14,11 @@ outputdir	= "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["glfw"] = "Engine/Libs/glfw/include"
 IncludeDir["glad"] = "Engine/Libs/glad/include"
+IncludeDir["ImGui"] = "Engine/Libs/ImGui"
 
 include "Engine/Libs/glfw"
 include "Engine/Libs/glad"
+include "Engine/Libs/ImGui"
 
 project "Engine"
 	location "Engine"
@@ -27,7 +29,7 @@ project "Engine"
 	objdir ("Obj/"  ..outputdir.. "/%{prj.name}")
 
 	pchheader "dpch.h"
-	pchsource "Engine/Src/dpch.cpp"
+	pchsource "%{prj.name}/Src/dpch.cpp"
 	
 	files
 	{
@@ -41,6 +43,7 @@ project "Engine"
 		"%{prj.name}//Libs/spdlog/include",
 		"%{IncludeDir.glfw}",
 		"%{IncludeDir.glad}",
+		"%{IncludeDir.ImGui}",
 		"%{prj.name}//Libs/GLM/glm"
 	}
 
@@ -48,6 +51,7 @@ project "Engine"
 	{
 		"glfw",
 		"glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 	

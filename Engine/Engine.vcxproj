@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>dpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DIV_BUILD_DLL;GLFW_INCLUDE_NONE;DIV_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;Libs\spdlog\include;Libs\glfw\include;Libs\glad\include;Libs\GLM\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;Libs\spdlog\include;Libs\glfw\include;Libs\glad\include;Libs\ImGui;Libs\GLM\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -103,7 +103,7 @@
       <PrecompiledHeaderFile>dpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DIV_BUILD_DLL;GLFW_INCLUDE_NONE;DIV_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;Libs\spdlog\include;Libs\glfw\include;Libs\glad\include;Libs\GLM\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;Libs\spdlog\include;Libs\glfw\include;Libs\glad\include;Libs\ImGui;Libs\GLM\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -130,7 +130,7 @@
       <PrecompiledHeaderFile>dpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>DIV_BUILD_DLL;GLFW_INCLUDE_NONE;DIV_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;Libs\spdlog\include;Libs\glfw\include;Libs\glad\include;Libs\GLM\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;Libs\spdlog\include;Libs\glfw\include;Libs\glad\include;Libs\ImGui;Libs\GLM\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -160,18 +160,24 @@
     <ClInclude Include="src\Division\Events\Event.h" />
     <ClInclude Include="src\Division\Events\KeyEvent.h" />
     <ClInclude Include="src\Division\Events\MouseEvent.h" />
+    <ClInclude Include="Src\Division\GUI\GuiLayer.h" />
     <ClInclude Include="src\Division\Layer\Layer.h" />
     <ClInclude Include="src\Division\Layer\LayerStack.h" />
     <ClInclude Include="src\Division\Utils\Log.h" />
+    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.h" />
+    <ClInclude Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Division\Window\Window.h" />
     <ClInclude Include="src\Division\Window\WindowInterface.h" />
     <ClInclude Include="src\dpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp" />
+    <ClCompile Include="Src\Division\GUI\GuiLayer.cpp" />
     <ClCompile Include="src\Division\Layer\Layer.cpp" />
     <ClCompile Include="src\Division\Layer\LayerStack.cpp" />
     <ClCompile Include="src\Division\Utils\Log.cpp" />
+    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Division\Window\Window.cpp" />
     <ClCompile Include="src\dpch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -183,6 +189,9 @@
     </ProjectReference>
     <ProjectReference Include="Libs\glad\glad.vcxproj">
       <Project>{DD62977C-C999-980D-7286-7E105E9C140F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="Libs\ImGui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

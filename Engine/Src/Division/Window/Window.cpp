@@ -99,6 +99,14 @@ namespace Division
 				}
 			});
 
+		glfwSetCharCallback(_window, [](GLFWwindow* window, unsigned int character)
+			{
+				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
+				KeyTypedEvent keyTypedEvent(character);
+				data.EventCallback(keyTypedEvent);
+			});
+
+
 		glfwSetMouseButtonCallback(_window, [](GLFWwindow* window, int button, int action, int mods) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 			switch (action) {

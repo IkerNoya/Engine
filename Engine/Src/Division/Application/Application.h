@@ -11,6 +11,7 @@ namespace Division
 	//solo hay uno por motor/app
 	class DIVISION_API Application
 	{
+		static Application* _instance;
 		//unique indica que solo esta clase posee este puntero/instancia
 		std::unique_ptr<WindowInterface> _window;
 		LayerStack _layerStack;
@@ -24,6 +25,9 @@ namespace Division
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* overlay);
+
+		inline WindowInterface& GetWindow() { return *_window; }
+		inline static Application& Get() { return *_instance; }
 	private:
 		bool OnWindowClosed(WindowCloseEvent& e);
 	};
