@@ -15,6 +15,7 @@ IncludeDir = {}
 IncludeDir["glfw"] = "Engine/Libs/glfw/include"
 IncludeDir["glad"] = "Engine/Libs/glad/include"
 IncludeDir["ImGui"] = "Engine/Libs/ImGui"
+IncludeDir["glm"] = "Engine/Libs/glm"
 
 group "Dependencies"
 	include "Engine/Libs/glfw"
@@ -28,8 +29,8 @@ project "Engine"
 	language "C++"
 	staticruntime "off"
 
-	targetdir ("bin/"  ..outputdir.. "/%{prj.name}")
-	objdir ("obj/"  ..outputdir.. "/%{prj.name}")
+	targetdir ("Bin/"  ..outputdir.. "/%{prj.name}")
+	objdir ("Obj/"  ..outputdir.. "/%{prj.name}")
 
 	pchheader "dpch.h"
 	pchsource "%{prj.name}/Src/dpch.cpp"
@@ -37,7 +38,9 @@ project "Engine"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/Libs/glm/glm/**.hpp",
+		"%{prj.name}/Libs/glm/glm/**.inl"
 	}
 
 	includedirs 
@@ -47,7 +50,7 @@ project "Engine"
 		"%{IncludeDir.glfw}",
 		"%{IncludeDir.glad}",
 		"%{IncludeDir.ImGui}",
-		"%{prj.name}//Libs/GLM/glm"
+		"%{IncludeDir.glm}"
 	}
 
 	links 
@@ -70,7 +73,7 @@ project "Engine"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir.. "/Game/\"");
+			("{COPY} %{cfg.buildtarget.relpath} ../Bin/" .. outputdir .. "/Game")
 		}
 
 	filter "configurations:Debug"
@@ -113,7 +116,7 @@ project "Game"
 	{
 		"Engine/Libs/spdlog/include",
 		"Engine/src",
-		"Engine/Libs/GLM/glm"
+		"%{IncludeDir.glm}"
 	}
 
 	links
