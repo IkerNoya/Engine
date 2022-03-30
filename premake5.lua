@@ -16,9 +16,11 @@ IncludeDir["glfw"] = "Engine/Libs/glfw/include"
 IncludeDir["glad"] = "Engine/Libs/glad/include"
 IncludeDir["ImGui"] = "Engine/Libs/ImGui"
 
-include "Engine/Libs/glfw"
-include "Engine/Libs/glad"
-include "Engine/Libs/ImGui"
+group "Dependencies"
+	include "Engine/Libs/glfw"
+	include "Engine/Libs/glad"
+	include "Engine/Libs/ImGui"
+group ""
 
 project "Engine"
 	location "Engine"
@@ -26,8 +28,8 @@ project "Engine"
 	language "C++"
 	staticruntime "off"
 
-	targetdir ("Bin/"  ..outputdir.. "/%{prj.name}")
-	objdir ("Obj/"  ..outputdir.. "/%{prj.name}")
+	targetdir ("bin/"  ..outputdir.. "/%{prj.name}")
+	objdir ("obj/"  ..outputdir.. "/%{prj.name}")
 
 	pchheader "dpch.h"
 	pchsource "%{prj.name}/Src/dpch.cpp"
@@ -68,7 +70,7 @@ project "Engine"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath} ../Bin/" .. outputdir .. "/Game")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir.. "/Game/\"");
 		}
 
 	filter "configurations:Debug"

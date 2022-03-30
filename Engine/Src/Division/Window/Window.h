@@ -7,7 +7,7 @@
 namespace Division
 {
 	//no tiene que conocer a application
-	class DIVISION_API Window : public WindowInterface{
+	class DIVISION_API Window : public WindowInterface {
 		GLFWwindow* _window;
 		struct WindowData {
 			std::string title;
@@ -30,6 +30,10 @@ namespace Division
 		inline void SetEventCallback(const EventCallbackFn& callback) override { _data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSyncEnabled() const override;
+
+		inline void* GetNativeWindow() const override {
+			return _window;
+		}
 
 	private:
 		virtual void Init(const WindowProperties& properties);

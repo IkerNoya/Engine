@@ -5,6 +5,8 @@
 #include <backends/imgui_impl_opengl3.h>
 #include <GLFW/glfw3.h>
 #include "Division/Application/Application.h"
+#include "Division/Input/KeyCodes.h"
+#include "Division/Input/MouseButtonCodes.h"
 
 
 namespace Division 
@@ -24,8 +26,8 @@ namespace Division
 		io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
 		io.BackendFlags |= ImGuiBackendFlags_HasSetMousePos;
 
-		io.KeyMap[ImGuiKey_Delete] = GLFW_KEY_DELETE;
-		io.KeyMap[ImGuiKey_Backspace] = GLFW_KEY_BACKSPACE;
+		io.KeyMap[ImGuiKey_Delete] = KEYCODE_DELETE;
+		io.KeyMap[ImGuiKey_Backspace] = KEYCODE_BACKSPACE;
 
 		ImGui_ImplOpenGL3_Init("#version 410");
 	}
@@ -99,10 +101,10 @@ namespace Division
 		ImGuiIO& io = ImGui::GetIO();
 		io.KeysDown[e.GetKeyCode()] = true;
 
-		io.KeyCtrl = io.KeysDown[GLFW_KEY_LEFT_CONTROL] || io.KeysDown[GLFW_KEY_RIGHT_CONTROL];
-		io.KeyShift = io.KeysDown[GLFW_KEY_LEFT_SHIFT] || io.KeysDown[GLFW_KEY_RIGHT_SHIFT];
-		io.KeyAlt = io.KeysDown[GLFW_KEY_LEFT_ALT] || io.KeysDown[GLFW_KEY_RIGHT_ALT];
-		io.KeySuper = io.KeysDown[GLFW_KEY_LEFT_SUPER] || io.KeysDown[GLFW_KEY_RIGHT_SUPER];
+		io.KeyCtrl = io.KeysDown[KEYCODE_LCONTROL] || io.KeysDown[KEYCODE_RCONTROL];
+		io.KeyShift = io.KeysDown[KEYCODE_LSHIFT] || io.KeysDown[KEYCODE_RSHIFT];
+		io.KeyAlt = io.KeysDown[KEYCODE_LALT] || io.KeysDown[KEYCODE_RALT];
+		io.KeySuper = io.KeysDown[KEYCODE_LSUPER] || io.KeysDown[KEYCODE_RSUPER];
 
 		return false;
 	}

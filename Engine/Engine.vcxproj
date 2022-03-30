@@ -55,22 +55,22 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\Bin\Debug-windows-x86_64\Engine\</OutDir>
-    <IntDir>..\Obj\Debug-windows-x86_64\Engine\</IntDir>
+    <OutDir>..\bin\Debug-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\obj\Debug-windows-x86_64\Engine\</IntDir>
     <TargetName>Engine</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\Bin\Release-windows-x86_64\Engine\</OutDir>
-    <IntDir>..\Obj\Release-windows-x86_64\Engine\</IntDir>
+    <OutDir>..\bin\Release-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\obj\Release-windows-x86_64\Engine\</IntDir>
     <TargetName>Engine</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\Bin\Dist-windows-x86_64\Engine\</OutDir>
-    <IntDir>..\Obj\Dist-windows-x86_64\Engine\</IntDir>
+    <OutDir>..\bin\Dist-windows-x86_64\Engine\</OutDir>
+    <IntDir>..\obj\Dist-windows-x86_64\Engine\</IntDir>
     <TargetName>Engine</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
@@ -90,10 +90,10 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\Bin\Debug-windows-x86_64\Engine\Engine.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Debug-windows-x86_64\Engine\Engine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\Bin\Debug-windows-x86_64\Engine\Engine.dll\ (xcopy /Q /E /Y /I ..\Bin\Debug-windows-x86_64\Engine\Engine.dll ..\Bin\Debug-windows-x86_64\Game &gt; nul) ELSE (xcopy /Q /Y /I ..\Bin\Debug-windows-x86_64\Engine\Engine.dll ..\Bin\Debug-windows-x86_64\Game &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Engine\Engine.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Engine\Engine.dll "..\bin\Debug-windows-x86_64\Game\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Engine\Engine.dll "..\bin\Debug-windows-x86_64\Game\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -117,10 +117,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\Bin\Release-windows-x86_64\Engine\Engine.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Release-windows-x86_64\Engine\Engine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\Bin\Release-windows-x86_64\Engine\Engine.dll\ (xcopy /Q /E /Y /I ..\Bin\Release-windows-x86_64\Engine\Engine.dll ..\Bin\Release-windows-x86_64\Game &gt; nul) ELSE (xcopy /Q /Y /I ..\Bin\Release-windows-x86_64\Engine\Engine.dll ..\Bin\Release-windows-x86_64\Game &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Engine\Engine.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Engine\Engine.dll "..\bin\Release-windows-x86_64\Game\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Engine\Engine.dll "..\bin\Release-windows-x86_64\Game\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -143,10 +143,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ImportLibrary>..\Bin\Dist-windows-x86_64\Engine\Engine.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Dist-windows-x86_64\Engine\Engine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\Bin\Dist-windows-x86_64\Engine\Engine.dll\ (xcopy /Q /E /Y /I ..\Bin\Dist-windows-x86_64\Engine\Engine.dll ..\Bin\Dist-windows-x86_64\Game &gt; nul) ELSE (xcopy /Q /Y /I ..\Bin\Dist-windows-x86_64\Engine\Engine.dll ..\Bin\Dist-windows-x86_64\Game &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Engine\Engine.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Engine\Engine.dll "..\bin\Dist-windows-x86_64\Game\" &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Engine\Engine.dll "..\bin\Dist-windows-x86_64\Game\" &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -159,6 +159,9 @@
     <ClInclude Include="src\Division\Events\KeyEvent.h" />
     <ClInclude Include="src\Division\Events\MouseEvent.h" />
     <ClInclude Include="src\Division\GUI\GuiLayer.h" />
+    <ClInclude Include="Src\Division\Input\Input.h" />
+    <ClInclude Include="Src\Division\Input\KeyCodes.h" />
+    <ClInclude Include="Src\Division\Input\MouseButtonCodes.h" />
     <ClInclude Include="src\Division\Layer\Layer.h" />
     <ClInclude Include="src\Division\Layer\LayerStack.h" />
     <ClInclude Include="src\Division\Utils\Log.h" />
@@ -168,10 +171,12 @@
     <ClInclude Include="src\Division\Window\Window.h" />
     <ClInclude Include="src\Division\Window\WindowInterface.h" />
     <ClInclude Include="src\dpch.h" />
+    <ClInclude Include="Src\Division\Input\WindowInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp" />
     <ClCompile Include="src\Division\GUI\GuiLayer.cpp" />
+    <ClCompile Include="Src\Division\Input\Input.cpp" />
     <ClCompile Include="src\Division\Layer\Layer.cpp" />
     <ClCompile Include="src\Division\Layer\LayerStack.cpp" />
     <ClCompile Include="src\Division\Utils\Log.cpp" />
@@ -181,6 +186,7 @@
     <ClCompile Include="src\dpch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Src\Division\Input\WindowInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Libs\glfw\GLFW.vcxproj">

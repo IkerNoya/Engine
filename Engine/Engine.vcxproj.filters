@@ -77,6 +77,10 @@
       <Filter>Division\Window</Filter>
     </ClInclude>
     <ClInclude Include="src\dpch.h" />
+    <ClInclude Include="Src\Division\Input\Input.h" />
+    <ClInclude Include="Src\Division\Input\WindowInput.h" />
+    <ClInclude Include="Src\Division\Input\KeyCodes.h" />
+    <ClInclude Include="Src\Division\Input\MouseButtonCodes.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
@@ -104,5 +108,7 @@
       <Filter>Division\Window</Filter>
     </ClCompile>
     <ClCompile Include="src\dpch.cpp" />
+    <ClCompile Include="Src\Division\Input\Input.cpp" />
+    <ClCompile Include="Src\Division\Input\WindowInput.cpp" />
   </ItemGroup>
 </Project>
