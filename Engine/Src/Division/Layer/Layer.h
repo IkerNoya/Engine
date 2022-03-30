@@ -17,6 +17,7 @@ namespace Division
 		virtual void OnDettach() {}
 		virtual void OnUpdate() {}
 		virtual void OnEvent(Event& e) {}
+		virtual void OnGuiRender() {}
 
 		inline const std::string& GetName() const { return _debugName; }
 	};

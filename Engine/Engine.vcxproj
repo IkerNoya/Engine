@@ -574,6 +574,8 @@
     <ClInclude Include="src\Division\Events\KeyEvent.h" />
     <ClInclude Include="src\Division\Events\MouseEvent.h" />
     <ClInclude Include="src\Division\GUI\GuiLayer.h" />
+    <ClInclude Include="Src\Division\GUI\imgui_impl_glfw.h" />
+    <ClInclude Include="Src\Division\GUI\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Division\Input\Input.h" />
     <ClInclude Include="src\Division\Input\KeyCodes.h" />
     <ClInclude Include="src\Division\Input\MouseButtonCodes.h" />
@@ -581,9 +583,6 @@
     <ClInclude Include="src\Division\Layer\Layer.h" />
     <ClInclude Include="src\Division\Layer\LayerStack.h" />
     <ClInclude Include="src\Division\Utils\Log.h" />
-    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_glfw.h" />
-    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.h" />
-    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Division\Window\Window.h" />
     <ClInclude Include="src\Division\Window\WindowInterface.h" />
     <ClInclude Include="src\dpch.h" />
@@ -591,13 +590,14 @@
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp" />
     <ClCompile Include="src\Division\GUI\GuiLayer.cpp" />
+    <ClCompile Include="Src\Division\GUI\ImGuiBuild.cpp" />
+    <ClCompile Include="Src\Division\GUI\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Src\Division\GUI\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Division\Input\Input.cpp" />
     <ClCompile Include="src\Division\Input\WindowInput.cpp" />
     <ClCompile Include="src\Division\Layer\Layer.cpp" />
     <ClCompile Include="src\Division\Layer\LayerStack.cpp" />
     <ClCompile Include="src\Division\Utils\Log.cpp" />
-    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_glfw.cpp" />
-    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Division\Window\Window.cpp" />
     <ClCompile Include="src\dpch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

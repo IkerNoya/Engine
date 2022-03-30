@@ -46,9 +46,6 @@
     <Filter Include="src\Division\Utils">
       <UniqueIdentifier>{21A64888-0D8A-09DE-76EA-033162EDF35F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\Division\Utils\OpenGL">
-      <UniqueIdentifier>{35002B6E-A1C2-5EF8-EA72-ED84567437D6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\Division\Window">
       <UniqueIdentifier>{C8494395-34AB-20A3-BD18-675529795762}</UniqueIdentifier>
     </Filter>
@@ -1347,15 +1344,6 @@
     <ClInclude Include="src\Division\Utils\Log.h">
       <Filter>src\Division\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_glfw.h">
-      <Filter>src\Division\Utils\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.h">
-      <Filter>src\Division\Utils\OpenGL</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Division\Utils\OpenGL\imgui_impl_opengl3_loader.h">
-      <Filter>src\Division\Utils\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Division\Window\Window.h">
       <Filter>src\Division\Window</Filter>
     </ClInclude>
@@ -1364,6 +1352,12 @@
     </ClInclude>
     <ClInclude Include="src\dpch.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Division\GUI\imgui_impl_glfw.h">
+      <Filter>src\Division\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Division\GUI\imgui_impl_opengl3.h">
+      <Filter>src\Division\GUI</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1388,17 +1382,20 @@
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>src\Division\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_glfw.cpp">
-      <Filter>src\Division\Utils\OpenGL</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Division\Utils\OpenGL\imgui_impl_opengl3.cpp">
-      <Filter>src\Division\Utils\OpenGL</Filter>
-    </ClCompile>
     <ClCompile Include="src\Division\Window\Window.cpp">
       <Filter>src\Division\Window</Filter>
     </ClCompile>
     <ClCompile Include="src\dpch.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Division\GUI\ImGuiBuild.cpp">
+      <Filter>src\Division\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Division\GUI\imgui_impl_glfw.cpp">
+      <Filter>src\Division\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Division\GUI\imgui_impl_opengl3.cpp">
+      <Filter>src\Division\GUI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

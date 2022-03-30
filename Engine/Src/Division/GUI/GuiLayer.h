@@ -14,21 +14,13 @@ namespace Division
 		GuiLayer();
 		~GuiLayer();
 
-		void OnAttach() override;
-		void OnDettach() override;
+		virtual void OnAttach() override;
+		virtual void OnDettach() override;
 
-		void OnUpdate() override;
-		void OnEvent(Event& e) override;
+		virtual void OnGuiRender() override;
 
-	private:
-		bool OnMouseButtonPressedEvent(MouseButtonPressedEvent& e);
-		bool OnMouseButtonReleasedEvent(MouseButtonReleasedEvent& e);
-		bool OnMouseMovedEvent(MouseMovedEvent& e);
-		bool OnMouseScrolledEvent(MouseScrolledEvent& e);
-		bool OnKeyPressedEvent(KeyPressedEvent& e);
-		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
-		bool OnKeyTypedEvent(KeyTypedEvent& e);
-		bool OnWindowResizeEvent(WindowResizeEvent& e);
+		void Begin();
+		void End();
 	};
 
 }

@@ -6,6 +6,8 @@
 #include "Division/Window/WindowInterface.h"
 #include "Division/Layer/LayerStack.h"
 
+#include "Division/GUI/GuiLayer.h"
+
 namespace Division
 {
 	//solo hay uno por motor/app
@@ -14,6 +16,7 @@ namespace Division
 		static Application* _instance;
 		//unique indica que solo esta clase posee este puntero/instancia
 		std::unique_ptr<WindowInterface> _window;
+		GuiLayer* _guiLayer;
 		LayerStack _layerStack;
 		bool _running = true;
 	public:

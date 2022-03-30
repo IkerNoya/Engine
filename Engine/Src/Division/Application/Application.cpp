@@ -16,7 +16,10 @@ namespace Division
 		_instance = this;
 		//no lo tenemos que eliminar manualmente
 		_window = std::unique_ptr<WindowInterface>(WindowInterface::Create());
+		_guiLayer = new GuiLayer();
 		_window->SetEventCallback(BIND_EVENT(OnEvent));
+
+		PushOverlay(_guiLayer);
 	}
 	Application::~Application() {
 	}
@@ -28,6 +31,12 @@ namespace Division
 			for (Layer* layer : _layerStack) {
 				layer->OnUpdate();
 			}
+			_guiLayer->Begin();
+			for (Layer* layer : _layerStack) {
+				_guiLayer->OnGuiRender();
+			}
+			_guiLayer->End();
+
 
 			_window->OnUpdate();
 		}
