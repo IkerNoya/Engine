@@ -20,14 +20,14 @@ namespace Division
 //Engine logs
 #define DIV_CORE_ERROR(...)		::Division::Log::	GetCoreLogger()->error(__VA_ARGS__)
 #define DIV_CORE_WARN(...)		::Division::Log::	GetCoreLogger()->warn(__VA_ARGS__)
-#define DIV_CORE_INFO(...)			::Division::Log::	GetCoreLogger()->info(__VA_ARGS__)
+#define DIV_CORE_INFO(...)		::Division::Log::	GetCoreLogger()->info(__VA_ARGS__)
 #define DIV_CORE_TRACE(...)		::Division::Log::	GetCoreLogger()->trace(__VA_ARGS__)
 
 //Client logs
-#define DIV_ERROR(...)					::Division::Log::	GetClientLogger()->error(__VA_ARGS__)
-#define DIV_WARN(...)					::Division::Log::	GetClientLogger()->warn(__VA_ARGS__)
+#define DIV_ERROR(...)				::Division::Log::	GetClientLogger()->error(__VA_ARGS__)
+#define DIV_WARN(...)				::Division::Log::	GetClientLogger()->warn(__VA_ARGS__)
 #define DIV_INFO(...)					::Division::Log::	GetClientLogger()->info(__VA_ARGS__)
-#define DIV_TRACE(...)					::Division::Log::	GetClientLogger()->trace(__VA_ARGS__)
+#define DIV_TRACE(...)				::Division::Log::	GetClientLogger()->trace(__VA_ARGS__)
 
 #endif // !LOG_H
 

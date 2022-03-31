@@ -1323,6 +1323,15 @@
     <ClInclude Include="src\Division\GUI\GuiLayer.h">
       <Filter>src\Division\GUI</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\GUI\imgui_impl_glfw.h">
+      <Filter>src\Division\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\GUI\imgui_impl_opengl3.h">
+      <Filter>src\Division\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\GUI\imgui_impl_opengl3_loader.h">
+      <Filter>src\Division\GUI</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Input\Input.h">
       <Filter>src\Division\Input</Filter>
     </ClInclude>
@@ -1353,18 +1362,22 @@
     <ClInclude Include="src\dpch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Division\GUI\imgui_impl_glfw.h">
-      <Filter>src\Division\GUI</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Division\GUI\imgui_impl_opengl3.h">
-      <Filter>src\Division\GUI</Filter>
-    </ClInclude>
+    <ClInclude Include="Src\Division\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
       <Filter>src\Division\Application</Filter>
     </ClCompile>
     <ClCompile Include="src\Division\GUI\GuiLayer.cpp">
+      <Filter>src\Division\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\GUI\ImGuiBuild.cpp">
+      <Filter>src\Division\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\GUI\imgui_impl_glfw.cpp">
+      <Filter>src\Division\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\GUI\imgui_impl_opengl3.cpp">
       <Filter>src\Division\GUI</Filter>
     </ClCompile>
     <ClCompile Include="src\Division\Input\Input.cpp">
@@ -1388,14 +1401,6 @@
     <ClCompile Include="src\dpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Division\GUI\ImGuiBuild.cpp">
-      <Filter>src\Division\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Division\GUI\imgui_impl_glfw.cpp">
-      <Filter>src\Division\GUI</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Division\GUI\imgui_impl_opengl3.cpp">
-      <Filter>src\Division\GUI</Filter>
-    </ClCompile>
+    <ClCompile Include="Src\Division\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>
