@@ -44,7 +44,7 @@ namespace Division {
 	};
 
 	class DIVISION_API KeyTypedEvent : public KeyEvent {
-		int _keyCode;
+		int _keyCode = 0;
 	public:
 		KeyTypedEvent(int keycode) : KeyEvent(keycode) {	}
 		

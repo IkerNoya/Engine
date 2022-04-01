@@ -25,9 +25,10 @@ group ""
 
 project "Engine"
 	location "Engine"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++"
-	staticruntime "off"
+	cppdialect "c++17"
+	staticruntime "on"
 
 	targetdir ("Bin/"  ..outputdir.. "/%{prj.name}")
 	objdir ("Obj/"  ..outputdir.. "/%{prj.name}")
@@ -62,7 +63,6 @@ project "Engine"
 	}
 	
 	filter "system:windows"
-		cppdialect "c++17"
 		systemversion "latest"
 		
 		defines
@@ -71,36 +71,31 @@ project "Engine"
 			"GLFW_INCLUDE_NONE"
 		}
 
-		postbuildcommands
-		{
-			("{COPY} %{cfg.buildtarget.relpath} ../Bin/" .. outputdir .. "/Game")
-		}
 
 	filter "configurations:Debug"
 		defines "DIV_DEBUG"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "DIV_RELEASE"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "DIV_DIST"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
-	filter {"system:windows", "configurations:Release"}
-		buildoptions "/MT"
-		optimize "On"
 
 project "Game"
 	location "Game"
 	kind "ConsoleApp"
-	language = "C++"
+	language "C++"
+	cppdialect "c++17"
 
-	staticruntime "off"
+
+	staticruntime "on"
 
 
 	targetdir ("Bin/"  ..outputdir.. "/%{prj.name}")
@@ -125,7 +120,6 @@ project "Game"
 	}
 	
 	filter "system:windows"
-		cppdialect "c++17"
 		systemversion "latest"
 		
 		defines
@@ -136,18 +130,15 @@ project "Game"
 	filter "configurations:Debug"
 		defines "DIV_DEBUG"
 		runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "DIV_RELEASE"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
 	filter "configurations:Dist"
 		defines "DIV_DIST"
 		runtime "Release"
-		optimize "On"
+		optimize "on"
 
-	filter {"system:windows", "configurations:Release"}
-		buildoptions "/MT"
-		optimize "On"

@@ -1,11 +1,14 @@
 #ifndef CORE_H
 #define CORE_H
-#ifdef DIV_BUILD_DLL
-#define DIVISION_API __declspec(dllexport)
+#if DIV_DYNAMIC_LINK
+	#ifdef DIV_BUILD_DLL
+		#define DIVISION_API __declspec(dllexport)
+	#else
+		#define DIVISION_API __declspec(dllimport)
+	#endif // HZ_BUILD_DLL
 #else
-#define DIVISION_API __declspec(dllimport)
-#endif // HZ_BUILD_DLL
-
+	#define DIVISION_API
+#endif
 #ifdef DIV_DEBUG
 	#define DIV_ENABLE_ASSERTS
 #endif

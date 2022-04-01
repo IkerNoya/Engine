@@ -43,6 +43,9 @@
     <Filter Include="src\Division\Layer">
       <UniqueIdentifier>{8DA19B87-7985-5CDD-E2E5-5630CEE8465F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Division\Renderer">
+      <UniqueIdentifier>{C73C0522-33A9-C01C-FC9C-587A68C8E284}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Division\Utils">
       <UniqueIdentifier>{21A64888-0D8A-09DE-76EA-033162EDF35F}</UniqueIdentifier>
     </Filter>
@@ -1350,6 +1353,9 @@
     <ClInclude Include="src\Division\Layer\LayerStack.h">
       <Filter>src\Division\Layer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\Renderer\Renderer.h">
+      <Filter>src\Division\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Utils\Log.h">
       <Filter>src\Division\Utils</Filter>
     </ClInclude>
@@ -1362,7 +1368,6 @@
     <ClInclude Include="src\dpch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Division\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
@@ -1392,6 +1397,9 @@
     <ClCompile Include="src\Division\Layer\LayerStack.cpp">
       <Filter>src\Division\Layer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Division\Renderer\Renderer.cpp">
+      <Filter>src\Division\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>src\Division\Utils</Filter>
     </ClCompile>
@@ -1401,6 +1409,5 @@
     <ClCompile Include="src\dpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Division\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>
