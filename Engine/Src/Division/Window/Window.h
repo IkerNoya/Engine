@@ -2,6 +2,7 @@
 #define WINDOW_H
 
 #include "WindowInterface.h"
+#include "Division/Renderer/RendererContext.h"
 #include <GLFW/glfw3.h>
 
 namespace Division
@@ -18,6 +19,8 @@ namespace Division
 			EventCallbackFn EventCallback;
 		};
 		WindowData _data;
+		RendererContext* _context;
+
 	public:
 		Window(const WindowProperties& properties);
 		virtual ~Window();

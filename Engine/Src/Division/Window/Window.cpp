@@ -3,8 +3,8 @@
 #include "Division/Events/AppEvent.h"
 #include "Division/Events/KeyEvent.h"
 #include "Division/Events/MouseEvent.h"
+#include "Division/Renderer/OpenGLContext.h"
 
-#include <glad/glad.h>
 
 namespace Division
 {
@@ -41,9 +41,8 @@ namespace Division
 		}
 
 		_window = glfwCreateWindow(static_cast<int>(_data.width), static_cast<int>(_data.height), _data.title.c_str(), nullptr, nullptr);
-		glfwMakeContextCurrent(_window);
-		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		DIV_CORE_ASSERT(status, "Couldn't initialize glad");
+		_context = new OpenGLContext(_window);
+		_context->Init();
 		glfwSetWindowUserPointer(_window, &_data);
 		SetVSync(true);
 
@@ -142,7 +141,7 @@ namespace Division
 
 	void Window::OnUpdate() {
 		glfwPollEvents();
-		glfwSwapBuffers(_window);
+		_context->SwapBuffers();
 	}
 	void Window::SetVSync(bool enabled) {
 		if (enabled)

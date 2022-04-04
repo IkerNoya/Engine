@@ -1353,7 +1353,7 @@
     <ClInclude Include="src\Division\Layer\LayerStack.h">
       <Filter>src\Division\Layer</Filter>
     </ClInclude>
-    <ClInclude Include="src\Division\Renderer\Renderer.h">
+    <ClInclude Include="src\Division\Renderer\RendererContext.h">
       <Filter>src\Division\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Division\Utils\Log.h">
@@ -1368,6 +1368,7 @@
     <ClInclude Include="src\dpch.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Division\Renderer\OpenGLContext.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
@@ -1397,9 +1398,6 @@
     <ClCompile Include="src\Division\Layer\LayerStack.cpp">
       <Filter>src\Division\Layer</Filter>
     </ClCompile>
-    <ClCompile Include="src\Division\Renderer\Renderer.cpp">
-      <Filter>src\Division\Renderer</Filter>
-    </ClCompile>
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>src\Division\Utils</Filter>
     </ClCompile>
@@ -1409,5 +1407,6 @@
     <ClCompile Include="src\dpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Division\Renderer\OpenGLContext.cpp" />
   </ItemGroup>
 </Project>

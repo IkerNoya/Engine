@@ -573,7 +573,8 @@
     <ClInclude Include="src\Division\Input\WindowInput.h" />
     <ClInclude Include="src\Division\Layer\Layer.h" />
     <ClInclude Include="src\Division\Layer\LayerStack.h" />
-    <ClInclude Include="src\Division\Renderer\Renderer.h" />
+    <ClInclude Include="Src\Division\Renderer\OpenGLContext.h" />
+    <ClInclude Include="src\Division\Renderer\RendererContext.h" />
     <ClInclude Include="src\Division\Utils\Log.h" />
     <ClInclude Include="src\Division\Window\Window.h" />
     <ClInclude Include="src\Division\Window\WindowInterface.h" />
@@ -589,7 +590,7 @@
     <ClCompile Include="src\Division\Input\WindowInput.cpp" />
     <ClCompile Include="src\Division\Layer\Layer.cpp" />
     <ClCompile Include="src\Division\Layer\LayerStack.cpp" />
-    <ClCompile Include="src\Division\Renderer\Renderer.cpp" />
+    <ClCompile Include="Src\Division\Renderer\OpenGLContext.cpp" />
     <ClCompile Include="src\Division\Utils\Log.cpp" />
     <ClCompile Include="src\Division\Window\Window.cpp" />
     <ClCompile Include="src\dpch.cpp">
