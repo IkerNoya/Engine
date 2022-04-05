@@ -1409,4 +1409,8 @@
     </ClCompile>
     <ClCompile Include="Src\Division\Renderer\OpenGLContext.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Src\Division\Shaders\BasicFragment.frag" />
+    <None Include="Src\Division\Shaders\BasicVertex.vert" />
+  </ItemGroup>
 </Project>

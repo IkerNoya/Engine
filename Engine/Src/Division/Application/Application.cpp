@@ -25,7 +25,7 @@ namespace Division
 	}
 	void Application::Run() {
 		while (_running) {
-			glClearColor(.37f, .36f, .64f, 1);
+			glClearColor(.1f, .1f, .1f, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			for (Layer* layer : _layerStack) {
