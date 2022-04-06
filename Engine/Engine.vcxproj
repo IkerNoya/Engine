@@ -558,6 +558,8 @@
     <ClInclude Include="src\Division.h" />
     <ClInclude Include="src\Division\Application\Application.h" />
     <ClInclude Include="src\Division\Core.h" />
+    <ClInclude Include="Src\Division\Entity\Entity.h" />
+    <ClInclude Include="Src\Division\Entity\Shape\Shape.h" />
     <ClInclude Include="src\Division\Entry.h" />
     <ClInclude Include="src\Division\Events\AppEvent.h" />
     <ClInclude Include="src\Division\Events\Event.h" />
@@ -573,8 +575,11 @@
     <ClInclude Include="src\Division\Input\WindowInput.h" />
     <ClInclude Include="src\Division\Layer\Layer.h" />
     <ClInclude Include="src\Division\Layer\LayerStack.h" />
+    <ClInclude Include="Src\Division\Math\Mat4.h" />
+    <ClInclude Include="Src\Division\Math\Vector.h" />
     <ClInclude Include="Src\Division\Renderer\OpenGLContext.h" />
     <ClInclude Include="src\Division\Renderer\RendererContext.h" />
+    <ClInclude Include="Src\Division\Shaders\Shader.h" />
     <ClInclude Include="src\Division\Utils\Log.h" />
     <ClInclude Include="src\Division\Window\Window.h" />
     <ClInclude Include="src\Division\Window\WindowInterface.h" />
@@ -582,6 +587,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp" />
+    <ClCompile Include="Src\Division\Entity\Entity.cpp" />
+    <ClCompile Include="Src\Division\Entity\Shape\Shape.cpp" />
     <ClCompile Include="src\Division\GUI\GuiLayer.cpp" />
     <ClCompile Include="src\Division\GUI\ImGuiBuild.cpp" />
     <ClCompile Include="src\Division\GUI\imgui_impl_glfw.cpp" />
@@ -591,6 +598,7 @@
     <ClCompile Include="src\Division\Layer\Layer.cpp" />
     <ClCompile Include="src\Division\Layer\LayerStack.cpp" />
     <ClCompile Include="Src\Division\Renderer\OpenGLContext.cpp" />
+    <ClCompile Include="Src\Division\Shaders\Shader.cpp" />
     <ClCompile Include="src\Division\Utils\Log.cpp" />
     <ClCompile Include="src\Division\Window\Window.cpp" />
     <ClCompile Include="src\dpch.cpp">

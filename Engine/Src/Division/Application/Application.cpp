@@ -44,7 +44,7 @@ namespace Division
 	void Application::OnEvent(Event& e){
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT(OnWindowClosed));
-		DIV_TRACE(e);
+		//DIV_TRACE(e);
 		for (auto it = _layerStack.end(); it != _layerStack.begin(); ) {
 			(*--it)->OnEvent(e);
 			if (e.Handled())

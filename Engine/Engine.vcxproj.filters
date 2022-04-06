@@ -1369,6 +1369,11 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="Src\Division\Renderer\OpenGLContext.h" />
+    <ClInclude Include="Src\Division\Shaders\Shader.h" />
+    <ClInclude Include="Src\Division\Entity\Entity.h" />
+    <ClInclude Include="Src\Division\Math\Vector.h" />
+    <ClInclude Include="Src\Division\Math\Mat4.h" />
+    <ClInclude Include="Src\Division\Entity\Shape\Shape.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
@@ -1408,6 +1413,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="Src\Division\Renderer\OpenGLContext.cpp" />
+    <ClCompile Include="Src\Division\Shaders\Shader.cpp" />
+    <ClCompile Include="Src\Division\Entity\Entity.cpp" />
+    <ClCompile Include="Src\Division\Entity\Shape\Shape.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Src\Division\Shaders\BasicFragment.frag" />
