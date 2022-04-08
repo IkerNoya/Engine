@@ -31,6 +31,12 @@
     <Filter Include="src\Division\Application">
       <UniqueIdentifier>{44AD326E-30D2-81EE-591D-677E45A1800C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Division\Entity">
+      <UniqueIdentifier>{2D49A46B-99AA-8179-2218-C82B8E78B838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Division\Entity\Shape">
+      <UniqueIdentifier>{2DD1AEED-9993-E277-E243-71044E45BB55}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Division\Events">
       <UniqueIdentifier>{C5E82C6C-314A-0A7A-BAB7-502C26184139}</UniqueIdentifier>
     </Filter>
@@ -43,8 +49,14 @@
     <Filter Include="src\Division\Layer">
       <UniqueIdentifier>{8DA19B87-7985-5CDD-E2E5-5630CEE8465F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Division\Math">
+      <UniqueIdentifier>{7AF5CECD-E60B-CD63-2F83-58859BD89DEB}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\Division\Renderer">
       <UniqueIdentifier>{C73C0522-33A9-C01C-FC9C-587A68C8E284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Division\Shaders">
+      <UniqueIdentifier>{DAFD8206-C68C-0CD0-6FAB-20CB5B191D76}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\Division\Utils">
       <UniqueIdentifier>{21A64888-0D8A-09DE-76EA-033162EDF35F}</UniqueIdentifier>
@@ -1308,6 +1320,12 @@
     <ClInclude Include="src\Division\Core.h">
       <Filter>src\Division</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\Entity\Entity.h">
+      <Filter>src\Division\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Entity\Shape\Shape.h">
+      <Filter>src\Division\Entity\Shape</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Entry.h">
       <Filter>src\Division</Filter>
     </ClInclude>
@@ -1353,8 +1371,20 @@
     <ClInclude Include="src\Division\Layer\LayerStack.h">
       <Filter>src\Division\Layer</Filter>
     </ClInclude>
+    <ClInclude Include="src\Division\Math\Mat4.h">
+      <Filter>src\Division\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Math\Vector.h">
+      <Filter>src\Division\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Renderer\OpenGLContext.h">
+      <Filter>src\Division\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\Division\Renderer\RendererContext.h">
       <Filter>src\Division\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Division\Shaders\Shader.h">
+      <Filter>src\Division\Shaders</Filter>
     </ClInclude>
     <ClInclude Include="src\Division\Utils\Log.h">
       <Filter>src\Division\Utils</Filter>
@@ -1368,16 +1398,16 @@
     <ClInclude Include="src\dpch.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Division\Renderer\OpenGLContext.h" />
-    <ClInclude Include="Src\Division\Shaders\Shader.h" />
-    <ClInclude Include="Src\Division\Entity\Entity.h" />
-    <ClInclude Include="Src\Division\Math\Vector.h" />
-    <ClInclude Include="Src\Division\Math\Mat4.h" />
-    <ClInclude Include="Src\Division\Entity\Shape\Shape.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
       <Filter>src\Division\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\Entity\Entity.cpp">
+      <Filter>src\Division\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\Entity\Shape\Shape.cpp">
+      <Filter>src\Division\Entity\Shape</Filter>
     </ClCompile>
     <ClCompile Include="src\Division\GUI\GuiLayer.cpp">
       <Filter>src\Division\GUI</Filter>
@@ -1403,6 +1433,12 @@
     <ClCompile Include="src\Division\Layer\LayerStack.cpp">
       <Filter>src\Division\Layer</Filter>
     </ClCompile>
+    <ClCompile Include="src\Division\Renderer\OpenGLContext.cpp">
+      <Filter>src\Division\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Division\Shaders\Shader.cpp">
+      <Filter>src\Division\Shaders</Filter>
+    </ClCompile>
     <ClCompile Include="src\Division\Utils\Log.cpp">
       <Filter>src\Division\Utils</Filter>
     </ClCompile>
@@ -1412,13 +1448,5 @@
     <ClCompile Include="src\dpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Division\Renderer\OpenGLContext.cpp" />
-    <ClCompile Include="Src\Division\Shaders\Shader.cpp" />
-    <ClCompile Include="Src\Division\Entity\Entity.cpp" />
-    <ClCompile Include="Src\Division\Entity\Shape\Shape.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Src\Division\Shaders\BasicFragment.frag" />
-    <None Include="Src\Division\Shaders\BasicVertex.vert" />
   </ItemGroup>
 </Project>

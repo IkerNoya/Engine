@@ -1,12 +1,12 @@
 [submodule "Engine/Libs/spdlog"]
 	path = Engine/Libs/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "Engine/Libs/glfw"]
-	path = Engine/Libs/glfw
-	url = https://github.com/TheCherno/GLFW
 [submodule "Engine/Libs/GLM"]
 	path = Engine/Libs/GLM
 	url = https://github.com/g-truc/glm
-[submodule "Engine/Libs/ImGui"]
-	path = Engine/Libs/ImGui
-	url = https://github.com/thecherno/ImGui
+[submodule "Engine/Libs/glfw"]
+	path = Engine/Libs/glfw
+	url = https://github.com/IkerNoya/glfw
+[submodule "Engine/Libs/imgui"]
+	path = Engine/Libs/imgui
+	url = https://github.com/IkerNoya/imgui

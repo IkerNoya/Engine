@@ -14,13 +14,13 @@ outputdir	= "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["glfw"] = "Engine/Libs/glfw/include"
 IncludeDir["glad"] = "Engine/Libs/glad/include"
-IncludeDir["ImGui"] = "Engine/Libs/ImGui"
+IncludeDir["ImGui"] = "Engine/Libs/imgui"
 IncludeDir["glm"] = "Engine/Libs/glm"
 
 group "Dependencies"
 	include "Engine/Libs/glfw"
 	include "Engine/Libs/glad"
-	include "Engine/Libs/ImGui"
+	include "Engine/Libs/imgui"
 group ""
 
 project "Engine"
