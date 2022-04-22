@@ -7,6 +7,7 @@
 #include "Division/Layer/LayerStack.h"
 
 #include "Division/GUI/GuiLayer.h"
+#include "Division/Shaders/Shader.h"
 
 namespace Division
 {
@@ -16,6 +17,7 @@ namespace Division
 		static Application* _instance;
 		//unique indica que solo esta clase posee este puntero/instancia
 		std::unique_ptr<WindowInterface> _window;
+		std::unique_ptr<Shader> _shader;
 		GuiLayer* _guiLayer;
 		LayerStack _layerStack;
 		bool _running = true;

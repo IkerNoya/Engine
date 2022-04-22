@@ -20,6 +20,7 @@ namespace Division
 		_window->SetEventCallback(BIND_EVENT(OnEvent));
 
 		PushOverlay(_guiLayer);
+		_shader.reset(new Shader("..//Engine//Src//Division//Shaders//BasicVertex.vert", "..//Engine//Src//Division//Shaders//BasicFragment.frag"));
 	}
 	Application::~Application() {
 	}
@@ -27,6 +28,8 @@ namespace Division
 		while (_running) {
 			glClearColor(.1f, .1f, .1f, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
+
+			_shader->Bind();
 
 			for (Layer* layer : _layerStack) {
 				layer->OnUpdate();
