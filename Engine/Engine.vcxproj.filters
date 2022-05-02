@@ -1377,7 +1377,7 @@
     <ClInclude Include="src\Division\Math\Vector.h">
       <Filter>src\Division\Math</Filter>
     </ClInclude>
-    <ClInclude Include="src\Division\Renderer\OpenGLContext.h">
+    <ClInclude Include="Src\Division\Renderer\OpenGL\OpenGLContext.h">
       <Filter>src\Division\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\Division\Renderer\RendererContext.h">
@@ -1398,6 +1398,9 @@
     <ClInclude Include="src\dpch.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Division\Renderer\Buffer.h" />
+    <ClInclude Include="Src\Division\Renderer\OpenGL\OpenGLBuffer.h" />
+    <ClInclude Include="Src\Division\Renderer\Renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Division\Application\Application.cpp">
@@ -1433,7 +1436,7 @@
     <ClCompile Include="src\Division\Layer\LayerStack.cpp">
       <Filter>src\Division\Layer</Filter>
     </ClCompile>
-    <ClCompile Include="src\Division\Renderer\OpenGLContext.cpp">
+    <ClCompile Include="Src\Division\Renderer\OpenGL\OpenGLContext.cpp">
       <Filter>src\Division\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\Division\Shaders\Shader.cpp">
@@ -1448,5 +1451,8 @@
     <ClCompile Include="src\dpch.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Src\Division\Renderer\Buffer.cpp" />
+    <ClCompile Include="Src\Division\Renderer\OpenGL\OpenGLBuffer.cpp" />
+    <ClCompile Include="Src\Division\Renderer\Renderer.cpp" />
   </ItemGroup>
 </Project>

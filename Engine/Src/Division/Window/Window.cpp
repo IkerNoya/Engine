@@ -3,7 +3,7 @@
 #include "Division/Events/AppEvent.h"
 #include "Division/Events/KeyEvent.h"
 #include "Division/Events/MouseEvent.h"
-#include "Division/Renderer/OpenGLContext.h"
+#include "Division/Renderer/OpenGL/OpenGLContext.h"
 
 
 namespace Division

@@ -5,6 +5,9 @@
 #include "Division/Utils/Log.h"
 #include <glad/glad.h>
 
+#include "Division/Shaders/Shader.h"
+#include "Division/Renderer/Buffer.h"
+
 namespace Division 
 {
 #define BIND_EVENT(x) std::bind(&Application::x, this, std::placeholders::_1)
@@ -20,6 +23,20 @@ namespace Division
 		_window->SetEventCallback(BIND_EVENT(OnEvent));
 
 		PushOverlay(_guiLayer);
+
+		float vertices[3 * 3] = {
+			-0.5f, -0.5f, 0.0f, 
+			0.5f, -0.5f, 0.0f,
+			0.0f, 0.5f, 0.0f
+		};
+		_vertexBuffer.reset(VertexBuffer::Create(vertices, sizeof(vertices)));
+
+		glDisableVertexAttribArray(0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), nullptr);
+
+		unsigned int indices[3] = { 0,1,2 };
+		_indexBuffer.reset(IndexBuffer::Create(indices, sizeof(indices) / sizeof(unsigned int)));
+
 		_shader.reset(new Shader("..//Engine//Src//Division//Shaders//BasicVertex.vert", "..//Engine//Src//Division//Shaders//BasicFragment.frag"));
 	}
 	Application::~Application() {
@@ -30,6 +47,8 @@ namespace Division
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			_shader->Bind();
+			glBindVertexArray(_vao);
+			glDrawElements(GL_TRIANGLES, _indexBuffer->GetCount(), GL_UNSIGNED_INT, nullptr);
 
 			for (Layer* layer : _layerStack) {
 				layer->OnUpdate();

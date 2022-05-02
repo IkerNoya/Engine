@@ -1,7 +1,7 @@
 #ifndef OPENGL_CONTEXT_H
 #define OPENGL_CONTEXT_H
 #include "Division/Core.h"
-#include "RendererContext.h"
+#include "Division/Renderer/RendererContext.h"
 
 struct GLFWwindow;
 namespace Division 
